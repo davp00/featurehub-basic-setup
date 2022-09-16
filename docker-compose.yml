@@ -1,0 +1,12 @@
+version: '3'
+services:
+  featurehub:
+    image: 'featurehub/party-server:latest'
+    user: '999:999'
+    ports:
+      - '8085:8085'
+    volumes: 
+      - 'featurehub_data:/db'
+volumes:
+  featurehub_data: 
+    driver: local
